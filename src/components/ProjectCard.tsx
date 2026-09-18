@@ -17,18 +17,22 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   const isEven = index % 2 === 0;
 
   return (
-    <article className="py-16 md:py-24 border-b border-zinc-200/70 dark:border-zinc-800/70 last:border-b-0">
+    <article className="py-20 md:py-28 border-b border-zinc-200/80 dark:border-zinc-800/80 last:border-b-0 relative">
+      {/* Editorial crosshair markers */}
+      <span className="absolute -top-2 left-0 text-zinc-300 dark:text-zinc-700 font-mono text-xs select-none">+</span>
+
       {/* Editorial Header Bar: Oversized Index & Category */}
-      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-10">
         <div className="flex items-baseline gap-4">
-          <span className="text-5xl sm:text-7xl font-bold font-mono tracking-tighter text-zinc-300 dark:text-zinc-700 select-none">
+          <span className="text-6xl sm:text-8xl font-black font-mono tracking-tighter text-zinc-300 dark:text-zinc-700 select-none">
             {project.number}
           </span>
           <div>
-            <div className="font-mono text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
-              {project.category}
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-500" />
+              <span>{project.category}</span>
             </div>
-            <div className="font-mono text-xs text-zinc-500 dark:text-zinc-400">
+            <div className="font-mono text-xs text-zinc-500 dark:text-zinc-400 mt-1">
               ROLE: <span className="font-semibold text-zinc-800 dark:text-zinc-200">{project.role}</span>
             </div>
           </div>

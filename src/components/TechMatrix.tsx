@@ -15,7 +15,7 @@ export const TechMatrix: React.FC = () => {
           >
             {/* Category Label */}
             <div className="w-full md:w-52 flex items-center gap-2 flex-shrink-0">
-              <span className={`w-1.5 h-1.5 rounded-full ${isAdditional ? 'bg-zinc-300 dark:bg-zinc-700' : 'bg-zinc-900 dark:bg-zinc-100'}`} />
+              <span className={`w-1.5 h-1.5 rounded-full ${isAdditional ? 'bg-zinc-300 dark:bg-zinc-700' : 'bg-blue-600 dark:bg-blue-500'}`} />
               <span className={`uppercase tracking-widest font-semibold ${
                 isAdditional ? 'text-zinc-500 text-[11px]' : 'text-zinc-900 dark:text-zinc-100 text-xs'
               }`}>

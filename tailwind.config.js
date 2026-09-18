@@ -8,23 +8,44 @@ export default {
   theme: {
     extend: {
       colors: {
+        paper: {
+          light: '#F8F7F4',
+          dark: '#0D0D0F',
+          surfaceLight: '#FFFFFF',
+          surfaceDark: '#141417',
+          subtleLight: '#F0EFEA',
+          subtleDark: '#19191D'
+        },
+        cobalt: {
+          DEFAULT: '#2563EB',
+          light: '#3B82F6',
+          dark: '#1D4ED8',
+          subtleLight: 'rgba(37, 99, 235, 0.08)',
+          subtleDark: 'rgba(59, 130, 246, 0.12)'
+        },
+        graphite: {
+          DEFAULT: '#111113',
+          light: '#EDEDEC',
+          mutedLight: '#66666E',
+          mutedDark: '#94949E'
+        },
         bg: {
-          light: '#FAFAF9',      // warm off-white
-          dark: '#0A0A0B',       // deep clean charcoal/black
-          subtleLight: '#F4F4F5',
+          light: '#F8F7F4',
+          dark: '#0D0D0F',
+          subtleLight: '#F0EFEA',
           subtleDark: '#141416'
         },
         border: {
-          light: '#E4E4E7',
-          dark: '#27272A'
+          light: '#E5E4DE',
+          dark: '#232328'
         },
         ink: {
-          primaryLight: '#18181B',
-          primaryDark: '#FAFAFA',
-          mutedLight: '#52525B',
-          mutedDark: '#A1A1AA',
-          faintLight: '#71717A',
-          faintDark: '#71717A'
+          primaryLight: '#111113',
+          primaryDark: '#EDEDEC',
+          mutedLight: '#66666E',
+          mutedDark: '#94949E',
+          faintLight: '#8A8A93',
+          faintDark: '#6E6E77'
         }
       },
       fontFamily: {

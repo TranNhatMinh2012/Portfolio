@@ -13,6 +13,7 @@ import { AboutSection } from './components/AboutSection';
 import { ContactSection } from './components/ContactSection';
 import { CVModal } from './components/CVModal';
 import { CommandPalette } from './components/CommandPalette';
+import { VisualMoment } from './components/VisualMoment';
 import { Footer } from './components/Footer';
 import { projectsData } from './data/projects';
 import { experienceData } from './data/experience';
@@ -45,8 +46,8 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] text-[#18181B] dark:bg-[#0A0A0B] dark:text-[#FAFAFA] font-sans selection:bg-zinc-900 selection:text-zinc-50 dark:selection:bg-zinc-100 dark:selection:text-zinc-900 transition-colors duration-200">
-      {/* Sticky Minimal Navigation */}
+    <div className="min-h-screen bg-[#F8F7F4] text-[#111113] dark:bg-[#0D0D0F] dark:text-[#EDEDEC] font-sans selection:bg-blue-600 selection:text-white dark:selection:bg-blue-500 dark:selection:text-zinc-950 transition-colors duration-200">
+      {/* Sticky Gallery Index Navigation */}
       <Navbar
         theme={theme}
         toggleTheme={toggleTheme}
@@ -64,12 +65,23 @@ export const App: React.FC = () => {
         {/* 01. WHO I AM: Large Editorial Portrait Spread */}
         <PortraitSection />
 
-        {/* 02. WHAT I BUILD: Digital Exhibition of Projects (Center of the Website) */}
-        <section id="projects" className="py-16 md:py-24 border-t border-zinc-200/70 dark:border-zinc-800/70">
+        {/* 02. PERSONAL IDENTITY: Human Mindset & Narrative */}
+        <section id="about" className="py-20 md:py-28 border-t border-zinc-200/80 dark:border-zinc-800/80 relative">
+          <span className="absolute -top-2 left-0 text-zinc-300 dark:text-zinc-700 font-mono text-xs select-none">+</span>
+          <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-500" />
+            <span>02 // PERSONAL IDENTITY</span>
+          </div>
+          <AboutSection />
+        </section>
+
+        {/* 03. WHAT I BUILD: Digital Exhibition of Projects (Center of the Website) */}
+        <section id="projects" className="py-20 md:py-28 border-t border-zinc-200/80 dark:border-zinc-800/80 relative">
+          <span className="absolute -top-2 left-0 text-zinc-300 dark:text-zinc-700 font-mono text-xs select-none">+</span>
           <SectionHeading
-            number="02"
-            tag="WHAT I BUILD"
-            title="Projects & Research Implementations"
+            number="03"
+            tag="SELECTED WORK"
+            title="Projects & Research Exhibition"
             description="Verified engineering implementations across multimodal deep learning, retail recommendation algorithms, sequence-to-sequence translation, and distributed text clustering."
           />
 
@@ -85,30 +97,24 @@ export const App: React.FC = () => {
           </div>
         </section>
 
-        {/* 03. HOW I THINK: Concise Human Narrative */}
-        <section id="about" className="py-16 md:py-28 border-t border-zinc-200/70 dark:border-zinc-800/70">
-          <div className="font-mono text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-6">
-            03 // HOW I THINK
-          </div>
-          <AboutSection />
-        </section>
-
         {/* 04. WHAT I KNOW: Refined Technical Stack System */}
-        <section id="focus" className="py-16 md:py-24 border-t border-zinc-200/70 dark:border-zinc-800/70">
+        <section id="focus" className="py-20 md:py-28 border-t border-zinc-200/80 dark:border-zinc-800/80 relative">
+          <span className="absolute -top-2 left-0 text-zinc-300 dark:text-zinc-700 font-mono text-xs select-none">+</span>
           <SectionHeading
             number="04"
-            tag="WHAT I KNOW"
-            title="Technical Competencies & Tools"
+            tag="TECHNICAL MAP"
+            title="Competencies & System Architecture"
             description="A categorical breakdown of programming languages, machine learning frameworks, and distributed big data tools."
           />
           <TechMatrix />
         </section>
 
         {/* 05. WHAT I'VE DONE: Teaching Experience & Academic Education */}
-        <section id="experience" className="py-16 md:py-24 border-t border-zinc-200/70 dark:border-zinc-800/70">
+        <section id="experience" className="py-20 md:py-28 border-t border-zinc-200/80 dark:border-zinc-800/80 relative">
+          <span className="absolute -top-2 left-0 text-zinc-300 dark:text-zinc-700 font-mono text-xs select-none">+</span>
           <SectionHeading
             number="05"
-            tag="WHAT I'VE DONE"
+            tag="TRAJECTORY"
             title="Experience & Education"
             description="Foundational teaching responsibilities at MindX and computer science degree credentials from Ton Duc Thang University."
           />
@@ -123,8 +129,17 @@ export const App: React.FC = () => {
           </div>
         </section>
 
+        {/* Visual Moment: Architectural Ethos Break */}
+        <VisualMoment
+          phrase={["BUILD.", "LEARN.", "ITERATE."]}
+          subtext="Bridging mathematical principles with scalable software implementations."
+          tag="// CORE ETHOS"
+          variant="large"
+        />
+
         {/* 06. LET'S TALK: Direct Editorial Contact & CV */}
-        <section id="contact" className="py-16 md:py-24 border-t border-zinc-200/70 dark:border-zinc-800/70">
+        <section id="contact" className="py-16 md:py-24 border-t border-zinc-200/80 dark:border-zinc-800/80 relative">
+          <span className="absolute -top-2 left-0 text-zinc-300 dark:text-zinc-700 font-mono text-xs select-none">+</span>
           <ContactSection />
         </section>
       </main>

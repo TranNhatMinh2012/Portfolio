@@ -11,13 +11,13 @@
   }
 
   ::selection {
-    background-color: #18181B;
-    color: #FAFAFA;
+    background-color: #2563EB;
+    color: #FFFFFF;
   }
 
   .dark ::selection {
-    background-color: #F4F4F5;
-    color: #09090B;
+    background-color: #3B82F6;
+    color: #0D0D0F;
   }
 
   /* Custom subtle scrollbar */

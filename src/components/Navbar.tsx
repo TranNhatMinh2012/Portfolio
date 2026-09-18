@@ -58,19 +58,22 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
         scrolled
-          ? 'bg-[#FAFAF9]/90 dark:bg-[#0A0A0B]/90 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800/80 py-3'
+          ? 'bg-[#F8F7F4]/90 dark:bg-[#0D0D0F]/90 backdrop-blur-md border-b border-[#E5E4DE] dark:border-[#232328] py-3'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Left: Brand name + Saigon Time */}
+        {/* Left: Gallery Index Identity */}
         <div className="flex items-center gap-4">
           <a
             href="#"
-            className="group flex items-center gap-2 text-sm font-semibold tracking-wider font-mono text-zinc-900 dark:text-zinc-100 hover:opacity-80 transition-opacity"
+            className="group flex items-baseline gap-2.5 text-xs font-mono font-bold tracking-wider text-zinc-950 dark:text-zinc-50 hover:opacity-80 transition-opacity"
           >
-            <span className="w-2 h-2 rounded-full bg-zinc-900 dark:bg-zinc-100 group-hover:scale-125 transition-transform" />
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-500" />
             <span>TRAN NHAT MINH</span>
+            <span className="hidden sm:inline text-[10px] text-zinc-400 dark:text-zinc-500 font-normal tracking-normal">
+              / TNM · 2026 · AI · DATA
+            </span>
           </a>
 
           {saigonTime && (

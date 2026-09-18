@@ -19,6 +19,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     <div className={`mb-12 md:mb-16 ${className}`}>
       {(number || tag) && (
         <div className="flex items-center gap-2 mb-3">
+          <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-500" />
           {number && (
             <span className="font-mono text-xs font-semibold text-zinc-900 dark:text-zinc-100">
               {number}
@@ -34,11 +35,11 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
           )}
         </div>
       )}
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 leading-tight">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50 leading-tight">
         {title}
       </h2>
       {description && (
-        <p className="mt-3 text-sm md:text-base text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed">
+        <p className="mt-3 text-sm md:text-base text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed text-justify">
           {description}
         </p>
       )}
