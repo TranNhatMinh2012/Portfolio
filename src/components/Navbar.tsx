@@ -5,14 +5,12 @@ import { Github, Linkedin, Sun, Moon, Menu, X, FileText, Command, Clock } from '
 interface NavbarProps {
   theme: 'light' | 'dark';
   toggleTheme: () => void;
-  onOpenCV: () => void;
   onOpenCommandPalette: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   theme,
   toggleTheme,
-  onOpenCV,
   onOpenCommandPalette
 }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -106,13 +104,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span>Cmd+K</span>
           </button>
 
-          <button
-            onClick={onOpenCV}
+          <a
+            href="./CV_Tran_Nhat_Minh.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-100 transition-colors uppercase tracking-wider flex items-center gap-1"
+            title="Open Curriculum Vitae (PDF)"
           >
             <FileText className="w-3.5 h-3.5" />
             <span>CV</span>
-          </button>
+          </a>
 
           <span className="w-px h-4 bg-zinc-200 dark:bg-zinc-800" />
 
@@ -189,15 +190,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             </a>
           ))}
 
-          <button
-            onClick={() => {
-              setMobileMenuOpen(false);
-              onOpenCV();
-            }}
-            className="block w-full text-left py-1.5 uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-zinc-50"
+          <a
+            href="./CV_Tran_Nhat_Minh.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block w-full text-left py-1.5 uppercase tracking-wider text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-zinc-50 flex items-center justify-between"
           >
-            Curriculum Vitae (CV)
-          </button>
+            <span>Curriculum Vitae (PDF)</span>
+            <span className="text-[10px] font-mono text-blue-600 dark:text-blue-400">PDF ↗</span>
+          </a>
 
           <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between text-zinc-400 text-[11px]">
             <span>Saigon {saigonTime} ICT</span>

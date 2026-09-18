@@ -11,7 +11,6 @@ import { ExperienceItem } from './components/ExperienceItem';
 import { EducationItem } from './components/EducationItem';
 import { AboutSection } from './components/AboutSection';
 import { ContactSection } from './components/ContactSection';
-import { CVModal } from './components/CVModal';
 import { CommandPalette } from './components/CommandPalette';
 import { VisualMoment } from './components/VisualMoment';
 import { Footer } from './components/Footer';
@@ -23,7 +22,6 @@ import { Project } from './types/portfolio';
 export const App: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const [activeCaseStudy, setActiveCaseStudy] = useState<Project | null>(null);
-  const [cvModalOpen, setCvModalOpen] = useState(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
 
   // Global Ctrl+K / Cmd+K listener
@@ -51,14 +49,12 @@ export const App: React.FC = () => {
       <Navbar
         theme={theme}
         toggleTheme={toggleTheme}
-        onOpenCV={() => setCvModalOpen(true)}
         onOpenCommandPalette={() => setCommandPaletteOpen(true)}
       />
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 01. WHO I AM: Hero Identity Statement */}
         <Hero
-          onOpenCV={() => setCvModalOpen(true)}
           onOpenCommandPalette={() => setCommandPaletteOpen(true)}
         />
 
@@ -153,17 +149,10 @@ export const App: React.FC = () => {
         onClose={() => setActiveCaseStudy(null)}
       />
 
-      {/* Printable CV Modal */}
-      <CVModal
-        isOpen={cvModalOpen}
-        onClose={() => setCvModalOpen(false)}
-      />
-
       {/* Discreet Command Palette */}
       <CommandPalette
         isOpen={commandPaletteOpen}
         onClose={() => setCommandPaletteOpen(false)}
-        onOpenCV={() => setCvModalOpen(true)}
         theme={theme}
         toggleTheme={toggleTheme}
         onSelectProject={handleOpenProjectById}

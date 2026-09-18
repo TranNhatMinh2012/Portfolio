@@ -3,11 +3,10 @@ import { personalData } from '../data/personal';
 import { Github, ArrowDown, FileText, ArrowUpRight } from 'lucide-react';
 
 interface HeroProps {
-  onOpenCV: () => void;
   onOpenCommandPalette?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenCV }) => {
+export const Hero: React.FC<HeroProps> = () => {
   return (
     <section className="pt-24 pb-16 md:pt-36 md:pb-24">
       {/* Editorial Top Identity Ticker */}
@@ -76,13 +75,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV }) => {
             <ArrowUpRight className="w-3 h-3 opacity-70" />
           </a>
 
-          <button
-            onClick={onOpenCV}
+          <a
+            href="./CV_Tran_Nhat_Minh.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-transparent text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-50 hover:border-zinc-400 dark:hover:border-zinc-600 text-xs font-mono uppercase tracking-wider transition-colors"
           >
             <FileText className="w-3.5 h-3.5" />
-            <span>Curriculum Vitae</span>
-          </button>
+            <span>Curriculum Vitae (PDF)</span>
+            <ArrowUpRight className="w-3 h-3 opacity-70" />
+          </a>
         </div>
 
         <div className="font-mono text-xs text-zinc-400 dark:text-zinc-500">

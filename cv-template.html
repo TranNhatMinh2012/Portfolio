@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tran Nhat Minh — Curriculum Vitae</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 14mm 16mm 14mm 16mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #111113;
+      background: #FFFFFF;
+      font-size: 9.5pt;
+      line-height: 1.42;
+      -webkit-font-smoothing: antialiased;
+    }
+    .header {
+      border-bottom: 1.5px solid #111113;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .name-block h1 {
+      font-size: 20pt;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: #111113;
+      text-transform: uppercase;
+    }
+    .name-block .subtitle {
+      font-size: 8.5pt;
+      font-family: ui-monospace, "JetBrains Mono", Consolas, monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #2563EB;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+    .contact-block {
+      text-align: right;
+      font-family: ui-monospace, "JetBrains Mono", Consolas, monospace;
+      font-size: 8pt;
+      color: #4B5563;
+      line-height: 1.45;
+    }
+    .contact-block a {
+      color: #111113;
+      text-decoration: none;
+    }
+    .section {
+      margin-bottom: 11px;
+    }
+    .section-title {
+      font-family: ui-monospace, "JetBrains Mono", Consolas, monospace;
+      font-size: 8.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #111113;
+      border-bottom: 1px solid #E5E7EB;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background: #2563EB;
+      border-radius: 50%;
+    }
+    .item {
+      margin-bottom: 7px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .item-title {
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: #111113;
+    }
+    .item-role {
+      font-family: ui-monospace, "JetBrains Mono", Consolas, monospace;
+      font-size: 8pt;
+      color: #4B5563;
+      margin-left: 4px;
+      font-weight: 500;
+    }
+    .item-date {
+      font-family: ui-monospace, "JetBrains Mono", Consolas, monospace;
+      font-size: 8pt;
+      color: #6B7280;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .item-tech {
+      font-family: ui-monospace, "JetBrains Mono", Consolas, monospace;
+      font-size: 7.8pt;
+      color: #2563EB;
+      margin-bottom: 3px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      position: relative;
+      padding-left: 11px;
+      margin-bottom: 2.5px;
+      font-size: 9pt;
+      color: #374151;
+      text-align: justify;
+    }
+    li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #9CA3AF;
+      font-size: 8pt;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3px;
+      font-size: 8.5pt;
+    }
+    .skill-row {
+      display: flex;
+      line-height: 1.35;
+    }
+    .skill-category {
+      font-family: ui-monospace, "JetBrains Mono", Consolas, monospace;
+      font-weight: 700;
+      font-size: 8pt;
+      color: #1F2937;
+      min-width: 140px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .skill-list {
+      color: #4B5563;
+      flex: 1;
+    }
+    .summary-text {
+      font-size: 9pt;
+      color: #374151;
+      text-align: justify;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="name-block">
+      <h1>Tran Nhat Minh</h1>
+      <div class="subtitle">AI / Machine Learning / Data Engineering</div>
+    </div>
+    <div class="contact-block">
+      <div>Ho Chi Minh City, Vietnam (UTC+7)</div>
+      <div><a href="mailto:minhtran.it.work@gmail.com">minhtran.it.work@gmail.com</a></div>
+      <div>
+        <a href="https://github.com/TranNhatMinh2012">github.com/TranNhatMinh2012</a> · 
+        <a href="https://linkedin.com/in/zane004">linkedin.com/in/zane004</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Professional Profile -->
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="summary-text">
+      Computer Science graduate from Ton Duc Thang University focused on machine learning, deep learning, recommendation systems, and distributed data processing. Pragmatic engineer who values inspecting intermediate model representations (attention weights, convolutional feature maps, Spark partitions) over black-box usage. Experienced in building testable software pipelines, multimodal architectures, and instructing programming fundamentals at MindX.
+    </p>
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Ton Duc Thang University</span>
+          <span class="item-role">/ Bachelor of Science in Computer Science</span>
+        </div>
+        <span class="item-date">2022 — 2026 · HCMC, Vietnam</span>
+      </div>
+      <div style="font-size: 8.5pt; color: #4B5563; font-family: ui-monospace, monospace;">
+        Cumulative GPA: <strong style="color: #111113;">3.33 / 4.00</strong> · Focus: Artificial Intelligence, Machine Learning & Distributed Systems
+      </div>
+    </div>
+  </div>
+
+  <!-- Technical Competencies -->
+  <div class="section">
+    <div class="section-title">Technical Competencies</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-category">Core Programming:</span>
+        <span class="skill-list">Python, SQL, C++, Java, JavaScript</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Data & Analysis:</span>
+        <span class="skill-list">Pandas, NumPy, EDA, Feature Engineering, Data Preprocessing, Statistical Analysis</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Machine Learning:</span>
+        <span class="skill-list">Scikit-learn, Supervised & Unsupervised Learning, Classification, Clustering, Recommendation Systems</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Deep Learning:</span>
+        <span class="skill-list">PyTorch, TensorFlow / Keras, CNN, RNN, LSTM, Seq2Seq Architectures, Attention Mechanisms</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Applied AI & Vision:</span>
+        <span class="skill-list">Computer Vision (YOLOv8, ResNet), NLP (BERT), Multimodal AI, LLM Integration (Gemini API)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Big Data:</span>
+        <span class="skill-list">Apache Spark (PySpark), Distributed RDD Operations, MapReduce Concepts, Distributed Data Mining</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-category">Tools & Methods:</span>
+        <span class="skill-list">Git, GitHub, Docker, Linux / Bash, Jupyter Notebook, SQL Server, OOP, Agile / Scrum</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Selected Projects -->
+  <div class="section">
+    <div class="section-title">Selected Technical Projects</div>
+
+    <!-- Project 01 -->
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Visual Question Answering on Vehicles</span>
+          <span class="item-role">/ AI Engineer</span>
+        </div>
+        <span class="item-date">github.com/TranNhatMinh2012/deeplearning-midterm</span>
+      </div>
+      <div class="item-tech">Stack: PyTorch · YOLOv8 · ResNet · BERT · LSTM · Cross-Modal Attention · Seq2Seq</div>
+      <ul>
+        <li>Engineered an automated multimodal dataset pipeline combining YOLOv8 bounding proposals with Gemini API prompting for QA synthesis.</li>
+        <li>Extracted 2048-dimensional spatial feature maps with ResNet backbones and modeled linguistic queries via Bi-LSTM and BERT embeddings.</li>
+        <li>Implemented custom PyTorch Seq2Seq decoder modules with cross-modal attention dynamically aligning visual regions with query tokens.</li>
+      </ul>
+    </div>
+
+    <!-- Project 02 -->
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Smart Retail Recommendation System with LLM Integration</span>
+          <span class="item-role">/ Data & ML Engineer</span>
+        </div>
+        <span class="item-date">github.com/TranNhatMinh2012/DACNTT</span>
+      </div>
+      <div class="item-tech">Stack: Python · Pandas · Scikit-learn · TF-IDF · Co-occurrence Matrix · Gemini API</div>
+      <ul>
+        <li>Analyzed multi-item customer transaction baskets to identify primary driver products initiating shopping missions.</li>
+        <li>Constructed statistical co-occurrence correlation matrices and catalogue TF-IDF similarities to rank high-affinity follower items.</li>
+        <li>Integrated Gemini API for contextual re-ranking, balancing catalogue novelty, diversity, and basket synergy with natural-language rationales.</li>
+      </ul>
+    </div>
+
+    <!-- Project 03 -->
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Distributed Data Mining with PySpark</span>
+          <span class="item-role">/ Big Data Engineer</span>
+        </div>
+        <span class="item-date">github.com/TranNhatMinh2012/mining-massive-datasets-endterm</span>
+      </div>
+      <div class="item-tech">Stack: Apache Spark (PySpark) · K-Shingling · Jaccard Distance · Min-Heap · Agglomerative Clustering</div>
+      <ul>
+        <li>Built a distributed text mining pipeline decomposing unstructured documents into k-shingles and computing pairwise Jaccard distances.</li>
+        <li>Engineered a min-heap priority queue to track nearest merge pairs in O(1) time complexity without executor memory overflow.</li>
+        <li>Implemented hierarchical agglomerative clustering across distributed Spark RDD partitions utilizing broadcast variables.</li>
+      </ul>
+    </div>
+
+    <!-- Project 04 -->
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Vietnamese–English Neural Machine Translation</span>
+          <span class="item-role">/ Deep Learning Engineer</span>
+        </div>
+        <span class="item-date">github.com/TranNhatMinh2012/natural-language-processing</span>
+      </div>
+      <div class="item-tech">Stack: PyTorch · Seq2Seq · Bidirectional LSTM · Global Attention Mechanism</div>
+      <ul>
+        <li>Developed a sequence-to-sequence neural machine translation architecture with bidirectional LSTM encoder and attention decoder.</li>
+        <li>Implemented Luong global attention alignment to compute dynamic attention weight distributions between source and target vocabularies.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Professional Experience -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">MindX Technology School</span>
+          <span class="item-role">/ Lecturer, Part-time</span>
+        </div>
+        <span class="item-date">Nov 2025 — Present · Ho Chi Minh City</span>
+      </div>
+      <ul>
+        <li>Instructed students in programming fundamentals, computational thinking, and algorithmic problem-solving using Python and C++.</li>
+        <li>Mentored learners through structured debugging, clean code practices, project-based assignments, and Git version control workflows.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

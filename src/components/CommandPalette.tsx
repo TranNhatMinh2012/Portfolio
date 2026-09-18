@@ -6,7 +6,6 @@ import { Search, ArrowRight, Github, Linkedin, Mail, Printer, Sun, Moon, Sparkle
 interface CommandPaletteProps {
   isOpen: boolean;
   onClose: () => void;
-  onOpenCV: () => void;
   theme: 'light' | 'dark';
   toggleTheme: () => void;
   onSelectProject: (projectId: string) => void;
@@ -23,7 +22,6 @@ interface CommandItem {
 export const CommandPalette: React.FC<CommandPaletteProps> = ({
   isOpen,
   onClose,
-  onOpenCV,
   theme,
   toggleTheme,
   onSelectProject
@@ -131,12 +129,12 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
     // Actions
     {
       id: 'action-cv',
-      title: 'Print / Download Curriculum Vitae (PDF)',
+      title: 'Open / Download Curriculum Vitae (PDF)',
       category: 'Actions',
       icon: <Printer className="w-4 h-4" />,
       action: () => {
+        window.open('./CV_Tran_Nhat_Minh.pdf', '_blank');
         onClose();
-        onOpenCV();
       }
     },
     {
