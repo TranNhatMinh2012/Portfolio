@@ -207,47 +207,49 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: "graduate-vi-interactive",
+    id: "football-match-prediction",
     number: "05",
-    title: "Interactive Commemorative Web Application (Graduate_Vi)",
-    category: "Frontend Engineering / Creative Web",
-    role: "Frontend Developer",
-    shortDescription: "A custom interactive celebratory web application built with responsive HTML5, CSS3, and JavaScript, featuring structured modular views.",
+    title: "Football Match Outcome Analysis & Prediction",
+    category: "Data Analysis / Predictive Modeling",
+    role: "Data Analyst & ML Developer",
+    shortDescription: "An exploratory data analysis, statistical hypothesis testing (home advantage, rest intervals, rolling form), and predictive classification modeling on European football match datasets.",
     technologies: [
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Responsive Layouts",
-      "DOM Manipulation"
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scipy (Hypothesis Testing)",
+      "Scikit-learn",
+      "XGBoost",
+      "Feature Engineering"
     ],
     highlights: [
-      "Built a multi-page interactive web application featuring custom layouts and clean typography",
-      "Implemented modular pages including letter delivery, memory timeline cards, and formal decision sheets",
-      "Crafted responsive CSS stylesheets ensuring seamless presentation across desktop, tablet, and mobile",
-      "Used vanilla JavaScript for dynamic UI state transitions and interactive modal triggers",
-      "Deployed and verified live on GitHub Pages infrastructure"
+      "Formulated and verified statistical hypotheses using Chi-Square and ANOVA for home advantage, rest intervals, and rolling form",
+      "Engineered temporal features including exponential moving average form (form_ewm) and bookmaker implied probabilities",
+      "Benchmarked classification models (Logistic Regression, Random Forest, Gradient Boosting, XGBoost) against bookmaker baseline accuracy",
+      "Conducted feature importance and variance analysis to evaluate how situational factors impact match outcomes"
     ],
-    githubUrl: "https://github.com/TranNhatMinh2012/Graduate_Vi",
+    githubUrl: "https://github.com/VoTrongAnh/football_prediction",
     caseStudy: {
-      overview: "A personal creative frontend project built to deliver a customized digital graduation congratulatory website with tailored typography, interactive elements, and responsive styling.",
-      problem: "Static templates lack personalized interactive storytelling and flexible layout control across different screen sizes.",
-      approach: "Engineered a lightweight, dependency-free web project utilizing clean semantic HTML5 markup, pure CSS styling, and vanilla JavaScript DOM interactions.",
+      overview: "An end-to-end data analytics and predictive modeling workflow assessing what situational factors dictate professional football match outcomes across European leagues.",
+      problem: "Football match outcomes carry high variance. Modeling outcomes reliably requires rigorous exploratory analysis, statistical hypothesis testing, and temporal feature engineering beyond raw win/loss records.",
+      approach: "Executed a structured 4-phase data analytics pipeline: systematic data cleaning, statistical hypothesis testing (Home Advantage, Rest Intervals, Rolling Form), temporal feature engineering, and multi-model benchmarking against bookmaker probability baselines.",
       architectureDiagram: [
-        { label: "Semantic HTML5", detail: "Modular view files (can-cu, ki-niem, loi-chuc, quyet-dinh)" },
-        { label: "Custom CSS", detail: "Responsive grids, fluid typography, clean spacing" },
-        { label: "Vanilla JavaScript", detail: "Event listeners and interactive state changes", isAccent: true },
-        { label: "GitHub Pages Hosting", detail: "Static zero-latency content delivery" }
+        { label: "Data Cleaning & Harmonization", detail: "Missing value imputation, odds-to-probability mapping, match scheduling" },
+        { label: "Statistical Hypothesis Testing", detail: "Chi-Square (Home advantage) & ANOVA (Rest intervals, rolling form)", isAccent: true },
+        { label: "Temporal Feature Engineering", detail: "Exponential weighted moving averages (form_ewm) & rest day differentials (diff_rest)" },
+        { label: "Predictive Model Benchmarking", detail: "Logistic Regression, Random Forest, Gradient Boosting, XGBoost evaluated against baseline (51.2%)" }
       ],
       implementationPoints: [
-        "Constructed modular HTML pages tailored for different content formats (letters, memories, formal decrees)",
-        "Styled custom UI elements with pure CSS without third-party framework overhead",
-        "Engineered smooth interaction triggers using vanilla JavaScript DOM manipulation",
-        "Tested responsive viewports across mobile and desktop displays",
-        "Deployed to GitHub Pages for static delivery"
+        "Conducted bivariate and correlation analyses across match attributes to isolate informative situational metrics",
+        "Applied Chi-Square tests to statistically confirm home advantage significance (p < 0.001) over neutral assumptions",
+        "Evaluated rest intervals via ANOVA to quantify how asymmetric recovery days (diff_rest >= 3) shift win/draw probabilities",
+        "Engineered rolling exponential moving average features (form_ewm) to dynamically weigh recent match momentum",
+        "Tuned and benchmarked tree-based ensemble classifiers (Random Forest, XGBoost) against bookmaker baseline accuracy"
       ],
       keyTakeaways: [
-        "Pure HTML/CSS/JS offers zero-dependency simplicity, fast loading, and direct styling control",
-        "Semantic markup provides a solid foundation for accessible, responsive digital layouts"
+        "Rigorous statistical hypothesis testing validates situational assumptions before feeding features into predictive models",
+        "Rolling exponential weighted form captures team momentum significantly better than static fixed-window averages",
+        "Combining market implied probabilities with rest differential features yields meaningful edge in multi-class sports analytics"
       ]
     }
   }

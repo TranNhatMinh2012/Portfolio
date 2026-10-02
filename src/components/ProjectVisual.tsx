@@ -330,7 +330,8 @@ export const ProjectVisual: React.FC<ProjectVisualProps> = ({ project }) => {
   }
 
   // =========================================================================
-  // Project 05: Graduate_Vi (Digital Web Artifact / Browser Composition)
+  // Project 05: Football Match Outcome Analysis & Prediction
+  // Exhibition: Statistical Hypothesis Testing, Temporal Features, & Model Benchmarking
   // =========================================================================
   return (
     <div className="w-full rounded-xl border border-zinc-200 dark:border-zinc-800 bg-[#FDFDFD] dark:bg-[#111113] p-6 sm:p-8 font-mono text-xs overflow-hidden">
@@ -339,50 +340,92 @@ export const ProjectVisual: React.FC<ProjectVisualProps> = ({ project }) => {
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-500" />
           <span className="font-semibold text-zinc-800 dark:text-zinc-200 uppercase tracking-wider">
-            WEB ARCHITECTURE ARTIFACT
+            STATISTICAL EDA & HYPOTHESIS TESTING
           </span>
         </div>
-        <span className="hidden sm:inline">HTML5 · CSS3 · JAVASCRIPT</span>
+        <span className="hidden sm:inline">CHI-SQUARE · ANOVA · XGBOOST</span>
       </div>
 
-      {/* Browser Window Frame */}
-      <div className="rounded-lg border border-zinc-300/80 dark:border-zinc-700/80 bg-white dark:bg-zinc-950 shadow-sm overflow-hidden">
-        {/* Browser Top Bar */}
-        <div className="px-3.5 py-2 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-100/80 dark:bg-zinc-900/80 flex items-center justify-between">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-red-400/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-green-400/80" />
+      <div className="space-y-6">
+        {/* Top: 3 Statistical Hypotheses Testing Cards */}
+        <div className="space-y-2.5">
+          <div className="text-[10px] text-zinc-500 uppercase tracking-wider">
+            EMPIRICAL HYPOTHESIS VALIDATION
           </div>
-          <div className="font-mono text-[10px] text-zinc-400 bg-white dark:bg-zinc-950 px-3 py-0.5 rounded border border-zinc-200 dark:border-zinc-800">
-            https://trannhatminh2012.github.io/Graduate_Vi/
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            {/* H1: Home Advantage */}
+            <div className="p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50/70 dark:bg-zinc-900/50 space-y-1.5">
+              <div className="flex items-center justify-between text-[10px]">
+                <span className="font-bold text-blue-600 dark:text-blue-400">H1 // HOME ADVANTAGE</span>
+                <span className="text-[9px] px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 font-semibold">CONFIRMED</span>
+              </div>
+              <div className="text-zinc-800 dark:text-zinc-200 text-xs font-semibold">Chi-Square Test</div>
+              <p className="text-[11px] font-sans text-zinc-600 dark:text-zinc-400 leading-normal">
+                Home win rate significantly exceeds away win rate (p &lt; 0.001) across multiple European league seasons.
+              </p>
+            </div>
+
+            {/* H2: Rest Days Impact */}
+            <div className="p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50/70 dark:bg-zinc-900/50 space-y-1.5">
+              <div className="flex items-center justify-between text-[10px]">
+                <span className="font-bold text-blue-600 dark:text-blue-400">H2 // REST INTERVALS</span>
+                <span className="text-[9px] px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 font-semibold">SIGNIFICANT</span>
+              </div>
+              <div className="text-zinc-800 dark:text-zinc-200 text-xs font-semibold">ANOVA F-Test</div>
+              <p className="text-[11px] font-sans text-zinc-600 dark:text-zinc-400 leading-normal">
+                Rest disparity (diff_rest &ge; 3 days) causes measurable shift in match point acquisition and upset likelihood.
+              </p>
+            </div>
+
+            {/* H3: Rolling Form EWM */}
+            <div className="p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50/70 dark:bg-zinc-900/50 space-y-1.5">
+              <div className="flex items-center justify-between text-[10px]">
+                <span className="font-bold text-blue-600 dark:text-blue-400">H3 // ROLLING FORM</span>
+                <span className="text-[9px] px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 font-semibold">DYNAMIC</span>
+              </div>
+              <div className="text-zinc-800 dark:text-zinc-200 text-xs font-semibold">Exponential Moving Avg</div>
+              <p className="text-[11px] font-sans text-zinc-600 dark:text-zinc-400 leading-normal">
+                Weighted decay on recent match outcomes captures team momentum better than static 5-match rolling averages.
+              </p>
+            </div>
           </div>
-          <span className="text-[10px] text-zinc-400">PORTAL</span>
         </div>
 
-        {/* Content Body Preview */}
-        <div className="p-5 space-y-4 font-sans">
-          <div className="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-2.5 font-mono text-xs">
-            <span className="font-bold text-zinc-900 dark:text-zinc-100">
-              Interactive Commemorative Web Application
-            </span>
-            <span className="text-zinc-400 text-[10px]">Client-side Single Page System</span>
+        {/* Middle: Feature Pipeline & Market Implied Probabilities */}
+        <div className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800/80 bg-zinc-50/70 dark:bg-zinc-900/40 space-y-3">
+          <div className="flex items-center justify-between text-[10px] text-zinc-500 uppercase tracking-wider">
+            <span>ENGINEERED SITUATIONAL & MARKET FEATURES</span>
+            <span>SAMPLE OBSERVATION TENSOR</span>
           </div>
 
-          <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify">
-            A bespoke personal celebratory web experience engineered with semantic HTML5, responsive CSS3 grid systems, and custom vanilla JavaScript DOM interactions.
-          </p>
-
-          <div className="flex flex-wrap gap-2 pt-1 font-mono text-[11px]">
-            {['can-cu.html', 'ki-niem.html', 'loi-chuc.html', 'quyet-dinh.html'].map((page) => (
-              <span
-                key={page}
-                className="px-2.5 py-1 rounded bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300"
-              >
-                {page}
-              </span>
-            ))}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px]">
+            <div className="p-2 rounded bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800">
+              <span className="text-zinc-400 text-[10px] block">home_rest_days</span>
+              <span className="font-bold text-zinc-800 dark:text-zinc-200">6 days</span>
+            </div>
+            <div className="p-2 rounded bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800">
+              <span className="text-zinc-400 text-[10px] block">away_rest_days</span>
+              <span className="font-bold text-zinc-800 dark:text-zinc-200">3 days</span>
+            </div>
+            <div className="p-2 rounded bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800">
+              <span className="text-zinc-400 text-[10px] block">diff_rest</span>
+              <span className="font-bold text-blue-600 dark:text-blue-400">+3 (Advantage)</span>
+            </div>
+            <div className="p-2 rounded bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800">
+              <span className="text-zinc-400 text-[10px] block">home_form_ewm</span>
+              <span className="font-bold text-zinc-800 dark:text-zinc-200">2.14 pts</span>
+            </div>
           </div>
+        </div>
+
+        {/* Bottom: Model Evaluation vs Bookmaker Baseline */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-zinc-200/80 dark:border-zinc-800/80 text-[11px] text-zinc-500 dark:text-zinc-400">
+          <div className="flex items-center gap-3">
+            <span>Bookmaker Favorite Baseline: <strong className="text-zinc-700 dark:text-zinc-300">51.2%</strong></span>
+            <span>•</span>
+            <span>XGBoost Multi-Class Accuracy: <strong className="text-blue-600 dark:text-blue-400">54.6%</strong></span>
+          </div>
+          <span className="font-mono text-[10px] text-zinc-400">Target: Win / Draw / Loss</span>
         </div>
       </div>
     </div>

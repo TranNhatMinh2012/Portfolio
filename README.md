@@ -16,10 +16,10 @@ Built with **React 19**, **TypeScript**, **Tailwind CSS**, and **Vite**.
   2. `Smart Retail Recommendation System with LLM Integration` (Pandas, Scikit-learn, TF-IDF, Gemini API)
   3. `Distributed Data Mining with PySpark` (PySpark, Agglomerative Clustering, K-Shingling, Min-Heap)
   4. `Vietnamese–English Neural Machine Translation` (PyTorch, Seq2Seq, LSTM, Global Attention)
-  5. `Interactive Commemorative Web Application — Graduate_Vi` (HTML5, CSS3, JavaScript)
+  5. `Football Match Outcome Analysis & Prediction` (Python, Pandas, NumPy, Scipy, Scikit-learn, XGBoost)
 - **Technical Matrix**: Categorical skill breakdown across Programming, Data, ML, Deep Learning, AI, Big Data, and Tools (no fake percentage bars).
 - **Academic & Professional Profile**: Ton Duc Thang University (GPA 3.33/4.00), MindX Part-time Lecturer.
-- **Curriculum Vitae (CV)**: Interactive printable modal with 1-click **Print / Save as PDF** support.
+- **Curriculum Vitae (CV)**: Direct 1-click access to authentic publication-grade PDF file.
 - **Zero Fabrication**: 100% verified facts, no artificial metrics, no placeholder text.
 
 ---
